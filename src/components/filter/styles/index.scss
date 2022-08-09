@@ -1,0 +1,18 @@
+.xn-filter {
+  display: flex;
+  align-items: center;
+  margin: 0 10px;
+
+  &__label {
+    font-size: 12px;
+    margin-right: 10px;
+    white-space: nowrap;
+  }
+
+  .el-select {
+    min-width: 120px;
+  }
+  .el-input {
+    min-width: 120px;
+  }
+}

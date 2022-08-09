@@ -1,0 +1,9 @@
+.xn-filter-group {
+  display: inline-flex;
+  white-space: nowrap;
+  margin: 0 10px;
+
+  &__items {
+    display: inline-flex;
+  }
+}

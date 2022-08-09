@@ -1,0 +1,99 @@
+.xn-context-menu {
+  z-index: 9999;
+  position: absolute;
+  animation-duration: 0.3s !important;
+  .xn-context-menu-box {
+    top: 0;
+    padding: 5px 0;
+    flex-shrink: 0;
+    display: flex;
+    min-width: 80px;
+    position: absolute;
+    border-radius: 3px;
+    flex-direction: column;
+    color: -color("text-color");
+    border-radius: $layout-radius;
+    box-shadow: -var("layout-shadow");
+    border: 1px solid -color("border-color", 0.3);
+    background-color: -color("components-background-color");
+
+    &.is-append {
+      right: calc(-100% - 5px);
+      top: -5px;
+    }
+
+    .xn-context-menu-item {
+      height: 36px;
+      display: flex;
+      cursor: pointer;
+      flex-shrink: 0;
+      font-size: 14px;
+      padding: 0 15px;
+      line-height: 36px;
+      position: relative;
+      align-items: center;
+      color: -color("text-color");
+
+      .menu-text {
+        flex: 1;
+        height: 35px;
+        line-height: 35px;
+        white-space: nowrap;
+      }
+
+      &:not(.is-disabled):hover {
+        color: -color("primary-color");
+        background-color: -color("primary-color", 0.1);
+        .xn-icon {
+          color: -color("primary-color");
+        }
+      }
+
+      .xn-icon {
+        font-size: 14px;
+        &:first-child {
+          margin-right: 5px;
+        }
+
+        &:last-child {
+          margin-left: 5px;
+        }
+      }
+
+      &.is-active {
+        color: -color("primary-color");
+        background-color: -color("primary-color", 0.1);
+      }
+
+      &.is-ellipsis {
+        .menu-text {
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+      }
+
+      &.is-disabled {
+        cursor: not-allowed;
+        .menu-text {
+          color: -color("text-color", 0.6);
+
+          &:hover {
+            color: -color("text-color", 0.6);
+          }
+        }
+      }
+    }
+    &__content {
+      min-width: 300px;
+      padding: $layout-space;
+      padding-bottom: 0;
+    }
+    &__footer {
+      display: flex;
+      align-items: center;
+      padding: 0 $layout-space;
+      justify-content: flex-end;
+    }
+  }
+}

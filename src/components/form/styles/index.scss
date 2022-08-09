@@ -1,0 +1,68 @@
+.xn-form {
+  .el-form-item {
+    .el-input-number {
+      .el-input__inner {
+        text-align: left;
+      }
+      &__decrease,
+      &__increase {
+        border: 0;
+        background-color: transparent;
+      }
+    }
+
+    &__label {
+      .el-tooltip {
+        i {
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+
+  &-item {
+    display: flex;
+
+    &__prepend {
+      margin-right: 10px;
+    }
+
+    &__component {
+      &.is-flex {
+        flex: 1;
+        width: 100%;
+
+        & > div {
+          width: 100%;
+        }
+      }
+    }
+
+    &__append {
+      margin-left: 10px;
+    }
+
+    &__collapse {
+      width: 100%;
+      font-size: 12px;
+      cursor: pointer;
+
+      .el-divider {
+        margin: 16px 0;
+
+        &__text {
+          font-size: 12px;
+        }
+      }
+
+      i {
+        margin-left: 6px;
+      }
+    }
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: flex-end;
+  }
+}

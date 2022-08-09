@@ -1,0 +1,34 @@
+.xn-crud {
+  height: 100%;
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  flex-direction: column;
+  padding: 0 $layout-space;
+  border-radius: $layout-radius;
+  & > .el-row {
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 5px;
+    padding-top: calc($layout-space - 5px);
+  }
+  & > .el-row:first-child {
+    padding-top: $layout-space;
+  }
+}
+
+.xn-crud__op-dropdown-menu {
+  .el-dropdown-menu__item {
+    padding: 0;
+    height: 30px;
+    line-height: 30px;
+  }
+
+  .el-button {
+    height: 30px;
+    width: 100%;
+    padding: 0 20px;
+    text-align: left;
+    box-sizing: border-box;
+  }
+}

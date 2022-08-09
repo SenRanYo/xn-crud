@@ -1,0 +1,62 @@
+.xn-dialog {
+  &__header {
+    flex: 1;
+    height: 25px;
+    display: flex;
+    line-height: 25px;
+    user-select: none;
+    position: relative;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__title {
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    color: -color("text-color");
+  }
+
+  &__controls {
+    right: 0;
+    top: 50%;
+    z-index: 9;
+    width: 100%;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: flex-end;
+    transform: translateY(-50%);
+
+    .controls-button {
+      width: 30px;
+      display: flex;
+      outline: none;
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+      background-color: #fff;
+    }
+    button,
+    .minimize,
+    .maximize,
+    .close {
+      border: 0;
+      width: 25px;
+      height: 25px;
+      display: flex;
+      outline: none;
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+      background-color: -color("layout-color");
+      .xn-icon {
+        font-size: 16px;
+        color: -color("text-color");
+        &:hover {
+          color: -color("primary-color");
+        }
+      }
+    }
+  }
+}

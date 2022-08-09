@@ -1,0 +1,14 @@
+.xn-search-key {
+  display: flex;
+  margin-left: 10px;
+
+  &__select {
+    margin-right: 10px;
+  }
+
+  &__button {
+    &.el-button {
+      margin-left: 10px;
+    }
+  }
+}
