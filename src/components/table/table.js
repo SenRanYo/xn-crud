@@ -1,9 +1,9 @@
 import _ from "lodash-es";
-import Parse from "@/xiaoni/utils/parse";
-import store from "@/xiaoni/crud/store";
+import Parse from "../../utils/parse";
+import store from "../../store";
 import { mapGetters } from "vuex";
-import { Emitter } from "@/xiaoni/crud/mixins";
-import { renderNode } from "@/xiaoni/utils/vnode";
+import { Emitter } from "../../mixins";
+import { renderNode } from "../../utils/vnode";
 import "./styles/index.scss";
 
 export default {

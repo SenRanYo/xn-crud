@@ -1,6 +1,6 @@
 {
-  "name": "cl-admin-crud",
-  "version": "1.8.1",
+  "name": "xn-admin-crud",
+  "version": "1.0.0",
   "main": "/dist/xn-admin-crud.min.js",
   "license": "MIT",
   "scripts": {
@@ -8,8 +8,9 @@
     "dev": "webpack -w"
   },
   "dependencies": {
-    "array.prototype.flat": "^1.2.4",
-    "clone-deep": "^4.0.1"
+    "file-saver": "^2.0.5",
+    "lodash-es": "^4.17.21",
+    "xlsx": "^0.18.5"
   },
   "devDependencies": {
     "@babel/core": "^7.9.6",
@@ -39,6 +40,5 @@
   "files": [
     "dist",
     "example"
-  ],
-  "homepage": "https://github.com/cool-team-official/cl-admin-crud"
+  ]
 }

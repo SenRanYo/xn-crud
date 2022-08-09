@@ -1,15 +1,6 @@
 <template>
   <div class="xn-import-btn">
-    <el-button
-      :style="[crud.style.importBtn]"
-      :size="_size"
-      :type="type"
-      :plain="plain"
-      :round="round"
-      :circle="circle"
-      :icon="icon"
-      @click="visible = true"
-    >
+    <el-button :style="[crud.style.importBtn]" :size="_size" :type="type" :plain="plain" :round="round" :circle="circle" :icon="icon" @click="visible = true">
       <slot>
         {{ loading ? "导入中" : crud.dict.label.import }}
       </slot>
@@ -17,18 +8,10 @@
     <xn-dialog title="导入" width="600px" :visible.sync="visible" @closed="handleOnClosed">
       <div class="content-wrap">
         <div class="control-btn-wrap">
-          <input
-            hidden
-            ref="file"
-            type="file"
-            accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel"
-            @change="handleFileChange"
-          />
+          <input hidden ref="file" type="file" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel" @change="handleFileChange" />
           <el-button type="info" icon="xn-icon-folder-open" size="small" @click="handleClickSelectFileButton">选择文件</el-button>
           <el-button type="primary" icon="xn-icon-arrowdown" size="small" @click="handleDownloadTemplate">下载模板</el-button>
-          <el-button type="success" icon="xn-icon-arrowup" size="small" :loading="loading" :disabled="_disabled" @click="handleUploadFile"
-            >解析文件</el-button
-          >
+          <el-button type="success" icon="xn-icon-arrowup" size="small" :loading="loading" :disabled="_disabled" @click="handleUploadFile">解析文件</el-button>
         </div>
         <el-alert title="请选择和模板格式一样的数据" type="warning" effect="dark" show-icon :closable="false"> </el-alert>
         <div class="file-list">
@@ -46,8 +29,8 @@
 </template>
 
 <script>
-import { isFunction } from "@/xiaoni/utils/typeCheck";
-import { exportJsonToExcel } from "@/xiaoni/crud/utils/exportToExcel";
+import { isFunction } from "../../utils/typeCheck";
+import { exportJsonToExcel } from "../../utils/exportToExcel";
 export default {
   name: "xn-import-btn",
   componentName: "XnImportBtn",
@@ -237,55 +220,4 @@ export default {
 
 <style lang="scss" scoped>
 @import "./styles/index.scss";
-.xn-import-btn {
-  margin: 0 10px;
-}
-.content-wrap {
-  display: flex;
-  min-height: 280px;
-  border-radius: 6px;
-  padding: $layout-space;
-  flex-direction: column;
-  border: 1px dashed #989898;
-  .control-btn-wrap {
-    display: flex;
-    align-items: center;
-    margin-bottom: $layout-space;
-  }
-  .file-list {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    .file-item {
-      display: flex;
-      cursor: pointer;
-      overflow: hidden;
-      padding: 6px 2px;
-      line-height: 20px;
-      border-radius: 2px;
-      position: relative;
-      flex-direction: column;
-      margin-top: $layout-space;
-      &:hover {
-        background-color: -color("hover-background-color", 0.5);
-        .delete-btn {
-          display: inline-block;
-        }
-      }
-      .name-text {
-        white-space: nowrap;
-        margin-right: 50px;
-        text-overflow: ellipsis;
-      }
-      .delete-btn {
-        top: 50%;
-        right: 10px;
-        display: none;
-        margin-left: auto;
-        position: absolute;
-        transform: translateY(-50%);
-      }
-    }
-  }
-}
 </style>

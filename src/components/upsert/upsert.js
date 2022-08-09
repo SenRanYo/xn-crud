@@ -1,5 +1,5 @@
-import store from "@/xiaoni/crud/store";
-import { Emitter } from "@/xiaoni/crud/mixins";
+import store from "../../store";
+import { Emitter } from "../../mixins";
 
 export default {
   name: "xn-upsert",

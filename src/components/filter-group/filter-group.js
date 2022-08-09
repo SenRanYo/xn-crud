@@ -1,4 +1,4 @@
-import { cloneDeep } from "@/xiaoni/utils";
+import { cloneDeep } from "../../utils";
 import "./styles/index.scss";
 
 export default {

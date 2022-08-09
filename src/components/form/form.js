@@ -1,11 +1,11 @@
-import store from "@/xiaoni/crud/store";
-import Parse from "@/xiaoni/utils/parse";
-import valueHook from "@/xiaoni/crud/hook/value";
+import store from "../../store";
+import Parse from "../../utils/parse";
+import valueHook from "../../hook/value";
 import { mapGetters } from "vuex";
-import { renderNode } from "@/xiaoni/utils/vnode";
-import { deepMerge, cloneDeep } from "@/xiaoni/utils";
-import { Form, Emitter } from "@/xiaoni/crud/mixins";
-import { isFunction, isEmpty, isString, isObject, isBoolean } from "@/xiaoni/utils/typeCheck";
+import { renderNode } from "../../utils/vnode";
+import { deepMerge, cloneDeep } from "../../utils";
+import { Form, Emitter } from "../../mixins";
+import { isFunction, isEmpty, isString, isObject, isBoolean } from "../../utils/typeCheck";
 
 import "./styles/index.scss";
 
@@ -398,52 +398,52 @@ export default {
       return hidden
         ? null
         : buttons.map((vnode) => {
-            if (vnode == "save") {
-              return (
-                <el-button
-                  {...{
-                    props: {
-                      size,
-                      type: "success",
-                      disabled: this.loading,
-                      loading: this.saving,
-                      ...style.saveBtn,
+          if (vnode == "save") {
+            return (
+              <el-button
+                {...{
+                  props: {
+                    size,
+                    type: "success",
+                    disabled: this.loading,
+                    loading: this.saving,
+                    ...style.saveBtn,
+                  },
+                  on: {
+                    click: () => {
+                      this.submit();
                     },
-                    on: {
-                      click: () => {
-                        this.submit();
-                      },
+                  },
+                }}
+              >
+                {saveButtonText}
+              </el-button>
+            );
+          } else if (vnode == "close") {
+            return (
+              <el-button
+                {...{
+                  props: {
+                    size,
+                    ...style.closeBtn,
+                  },
+                  on: {
+                    click: () => {
+                      this.beforeClose();
                     },
-                  }}
-                >
-                  {saveButtonText}
-                </el-button>
-              );
-            } else if (vnode == "close") {
-              return (
-                <el-button
-                  {...{
-                    props: {
-                      size,
-                      ...style.closeBtn,
-                    },
-                    on: {
-                      click: () => {
-                        this.beforeClose();
-                      },
-                    },
-                  }}
-                >
-                  {closeButtonText}
-                </el-button>
-              );
-            } else {
-              return renderNode(vnode, {
-                scope: this.form,
-                $scopedSlots: this.$scopedSlots,
-              });
-            }
-          });
+                  },
+                }}
+              >
+                {closeButtonText}
+              </el-button>
+            );
+          } else {
+            return renderNode(vnode, {
+              scope: this.form,
+              $scopedSlots: this.$scopedSlots,
+            });
+          }
+        });
     },
   },
 

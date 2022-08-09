@@ -1,8 +1,7 @@
-import Vue from "vue";
 import store from "./store";
 import components from "./components";
-import { getInstance } from "@/xiaoni/utils";
-import "@/xiaoni/utils/done.js";
+import { getInstance } from "./utils";
+import "./utils/done";
 
 let Form = null;
 let ContextMenu = null;
@@ -63,6 +62,4 @@ const CRUD = {
 
 export { Form, ContextMenu };
 
-export default function (option = {}) {
-  Vue.use(CRUD, option);
-}
+export default CRUD

@@ -1,8 +1,8 @@
-import store from "@/xiaoni/crud/store";
-import { bootstrap } from "@/xiaoni/crud/app";
-import { Emitter } from "@/xiaoni/crud/mixins";
-import { deepMerge, throttle } from "@/xiaoni/utils";
-import { isArray, isString, isObject, isFunction } from "@/xiaoni/utils/typeCheck";
+import store from "../../store";
+import { bootstrap } from "../../app";
+import { Emitter } from "../../mixins";
+import { deepMerge, throttle } from "../../utils";
+import { isArray, isString, isObject, isFunction } from "../../utils/typeCheck";
 import "./styles/index.scss";
 
 export default {
@@ -104,6 +104,7 @@ export default {
         closeBtn: {},
         filterSearchBtn: {},
       },
+      screenSize: ""
     };
   },
 
@@ -129,7 +130,7 @@ export default {
     this.bindEvent(res);
 
     // 窗口事件
-    window.removeEventListener("resize", function () {});
+    window.removeEventListener("resize", function () { });
     const throttleFun = throttle(() => {
       this.doLayout();
     });

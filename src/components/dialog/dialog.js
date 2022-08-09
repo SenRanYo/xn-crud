@@ -1,6 +1,6 @@
 import { mapGetters } from "vuex";
-import { renderNode } from "@/xiaoni/utils/vnode";
-import { isBoolean } from "@/xiaoni/utils/typeCheck";
+import { renderNode } from "../../utils/vnode";
+import { isBoolean } from "../../utils/typeCheck";
 
 import "./styles/index.scss";
 
@@ -293,55 +293,55 @@ export default {
             {this.hiddenControls
               ? null
               : this.controls.map((vnode) => {
-                  // Fullscreen
-                  if (vnode === "fullscreen") {
-                    // 隐藏全屏按钮
-                    if (this.screen === "xs") {
-                      return null;
-                    }
-
-                    // 全屏切换按钮
-                    if (this.fullscreen) {
-                      return (
-                        <button
-                          type="button"
-                          class="minimize"
-                          on-click={() => {
-                            this.changeFullscreen(false);
-                          }}
-                        >
-                          <xn-icon name="xn-icon-fullscreen-exit"></xn-icon>
-                        </button>
-                      );
-                    } else {
-                      return (
-                        <button
-                          type="button"
-                          class="maximize"
-                          on-click={() => {
-                            this.changeFullscreen(true);
-                          }}
-                        >
-                          <xn-icon name="xn-icon-expend"></xn-icon>
-                        </button>
-                      );
-                    }
+                // Fullscreen
+                if (vnode === "fullscreen") {
+                  // 隐藏全屏按钮
+                  if (this.screen === "xs") {
+                    return null;
                   }
-                  // 关闭按钮
-                  else if (vnode === "close") {
+
+                  // 全屏切换按钮
+                  if (this.fullscreen) {
                     return (
-                      <button type="button" class="close" on-click={this.beforeClose}>
-                        <xn-icon name="xn-icon-close"></xn-icon>
+                      <button
+                        type="button"
+                        class="minimize"
+                        on-click={() => {
+                          this.changeFullscreen(false);
+                        }}
+                      >
+                        <xn-icon name="xn-icon-fullscreen-exit"></xn-icon>
+                      </button>
+                    );
+                  } else {
+                    return (
+                      <button
+                        type="button"
+                        class="maximize"
+                        on-click={() => {
+                          this.changeFullscreen(true);
+                        }}
+                      >
+                        <xn-icon name="xn-icon-expend"></xn-icon>
                       </button>
                     );
                   }
-                  // 自定义渲染
-                  else {
-                    return renderNode(vnode, {
-                      $scopedSlots: this.$scopedSlots,
-                    });
-                  }
-                })}
+                }
+                // 关闭按钮
+                else if (vnode === "close") {
+                  return (
+                    <button type="button" class="close" on-click={this.beforeClose}>
+                      <xn-icon name="xn-icon-close"></xn-icon>
+                    </button>
+                  );
+                }
+                // 自定义渲染
+                else {
+                  return renderNode(vnode, {
+                    $scopedSlots: this.$scopedSlots,
+                  });
+                }
+              })}
           </div>
         </div>
       );

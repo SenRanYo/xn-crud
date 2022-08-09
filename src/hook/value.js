@@ -1,4 +1,4 @@
-import { isArray, isFunction, isObject, isString } from "@/xiaoni/utils/typeCheck";
+import { isArray, isFunction, isObject, isString } from "../utils/typeCheck";
 
 export const format = {
   number(value) {

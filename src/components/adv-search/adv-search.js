@@ -1,6 +1,6 @@
 import { mapGetters } from "vuex";
-import { cloneDeep } from "@/xiaoni/utils";
-import { renderNode } from "@/xiaoni/utils/vnode";
+import { cloneDeep } from "../../utils";
+import { renderNode } from "../../utils/vnode";
 
 import "./styles/index.scss";
 

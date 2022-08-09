@@ -1,5 +1,5 @@
-import { isFunction } from "@/xiaoni/utils/typeCheck";
-import { exportJsonToExcel } from "@/xiaoni/crud/utils/exportToExcel";
+import { isFunction } from "../../utils/typeCheck";
+import { exportJsonToExcel } from "../../utils/exportToExcel";
 
 export default {
   name: "xn-export-btn",

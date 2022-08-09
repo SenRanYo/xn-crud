@@ -1,5 +1,5 @@
 import "./styles/index.scss";
-import { contains } from "@/xiaoni/utils";
+import { contains } from "../../utils";
 
 export default {
   name: "xn-context-menu",

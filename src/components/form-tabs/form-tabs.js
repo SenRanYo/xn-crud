@@ -1,4 +1,4 @@
-import { isArray, isEmpty } from "@/xiaoni/utils/typeCheck";
+import { isArray, isEmpty } from "../../utils/typeCheck";
 import "./styles/index.scss";
 
 export default {
