@@ -1,5 +1,5 @@
-import store from "@/xiaoni/crud/store";
-import { cloneDeep } from "@/xiaoni/utils";
+import store from "../store";
+import { cloneDeep } from "./index";
 import { isFunction, isString, isObject } from "lodash-es";
 
 /**

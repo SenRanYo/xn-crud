@@ -10,6 +10,7 @@
   "dependencies": {
     "file-saver": "^2.0.5",
     "lodash-es": "^4.17.21",
+    "vuex": "^3.4.0",
     "xlsx": "^0.18.5"
   },
   "devDependencies": {

@@ -4,16 +4,16 @@
   position: relative;
   box-sizing: border-box;
   flex-direction: column;
-  padding: 0 $layout-space;
-  border-radius: $layout-radius;
+  padding: 0 15px;
+  border-radius: 6px;
   & > .el-row {
     overflow-x: auto;
     overflow-y: hidden;
     padding-bottom: 5px;
-    padding-top: calc($layout-space - 5px);
+    padding-top: calc(15px - 5px);
   }
   & > .el-row:first-child {
-    padding-top: $layout-space;
+    padding-top: 15px;
   }
 }
 

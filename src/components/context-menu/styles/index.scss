@@ -12,7 +12,7 @@
     border-radius: 3px;
     flex-direction: column;
     color: -color("text-color");
-    border-radius: $layout-radius;
+    border-radius: 6px;
     box-shadow: -var("layout-shadow");
     border: 1px solid -color("border-color", 0.3);
     background-color: -color("components-background-color");
@@ -86,13 +86,13 @@
     }
     &__content {
       min-width: 300px;
-      padding: $layout-space;
+      padding: 15px;
       padding-bottom: 0;
     }
     &__footer {
       display: flex;
       align-items: center;
-      padding: 0 $layout-space;
+      padding: 0 15px;
       justify-content: flex-end;
     }
   }

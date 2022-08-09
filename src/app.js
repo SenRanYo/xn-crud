@@ -1,5 +1,5 @@
-import { deepMerge } from "@/xiaoni/utils";
-import { isFunction } from "@/xiaoni/utils/typeCheck";
+import { deepMerge } from "./utils";
+import { isFunction } from "./utils/typeCheck";
 
 export const bootstrap = (that) => {
   // eslint-disable-next-line

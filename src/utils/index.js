@@ -1,5 +1,5 @@
 import _ from "lodash-es";
-import store from "@/xiaoni/crud/store";
+import store from "../store";
 
 /**
  * @description 判断设备设否是PC

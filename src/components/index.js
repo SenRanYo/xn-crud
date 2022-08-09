@@ -2,7 +2,7 @@ import Crud from "./crud/crud";
 import AddBtn from "./add-btn/add-btn";
 import AdvBtn from "./adv-btn/adv-btn";
 import XnExportBtn from "./export-btn/export-btn";
-import XnImportBtn from "./import-btn/import-btn";
+// import XnImportBtn from "./import-btn/import-btn";
 import AdvSearch from "./adv-search/adv-search";
 import ContextMenu from "./context-menu/context-menu";
 import Flex from "./flex1/flex1";
@@ -25,7 +25,7 @@ export default {
   AddBtn,
   AdvBtn,
   XnExportBtn,
-  XnImportBtn,
+  // XnImportBtn,
   AdvSearch,
   ContextMenu,
   Flex,

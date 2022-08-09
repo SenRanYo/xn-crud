@@ -8,13 +8,13 @@
     display: flex;
     min-height: 280px;
     border-radius: 6px;
-    padding: $layout-space;
+    padding: 15px;
     flex-direction: column;
     border: 1px dashed #989898;
     .control-btn-wrap {
       display: flex;
       align-items: center;
-      margin-bottom: $layout-space;
+      margin-bottom: 15px;
     }
     .file-list {
       width: 100%;
@@ -29,7 +29,7 @@
         border-radius: 2px;
         position: relative;
         flex-direction: column;
-        margin-top: $layout-space;
+        margin-top: 15px;
         &:hover {
           background-color: -color("hover-background-color", 0.5);
           .delete-btn {

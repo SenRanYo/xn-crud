@@ -1,4 +1,4 @@
-import { dataset, getParent } from "@/xiaoni/utils";
+import { dataset, getParent } from "../utils";
 
 export default {
   mounted() {
